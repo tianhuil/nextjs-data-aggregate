@@ -20,4 +20,17 @@ const dataSchema = new Schema(
   }
 )
 
+const preferenceSchema = new Schema(
+  {
+    lastAggregation: {
+      type: Number,
+      required: true,
+    },
+  },
+  {
+    versionKey: false,
+  }
+)
+
 export const AnalyticsData = model('Data', dataSchema)
+export const Preference = model('Preference', preferenceSchema)
