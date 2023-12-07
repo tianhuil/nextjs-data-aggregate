@@ -107,7 +107,9 @@ module.exports = {
     ],
 
     'import/extensions': 'off',
-    'import/no-relative-parent-imports': 'error',
+    'import/no-relative-parent-imports': ['error', {
+      ignore: ['~/']
+    }],
     'filename-rules/match': ['error', /^([a-z0-9]+-)*[a-z0-9]+(?:\..*)?$/],
     'jest/no-disabled-tests': 'error',
     'security/detect-possible-timing-attacks': 'error',

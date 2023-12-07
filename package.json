@@ -9,21 +9,20 @@
     "clean": "rm -rf .next && rm -f tsconfig.tsbuildinfo",
     "typecheck": "tsc --noEmit",
     "lint": "eslint --ext ts --cache --cache-location ./.next/cache/eslint/ .",
-    "lint:env": "ts-node script/lint-env.ts",
     "lint:write": "npm run lint -- --fix",
-    "lint:env:write": "SKIP_LOCAL=true ts-node script/lint-env-fix.ts",
     "jest": "jest --bail",
     "cspell": "cspell lint \"**/*.{ts,js}\" --no-progress",
     "jest:dev": "cross-env NODE_ENV=development jest",
-    "prettier": "prettier --check \"**/*.{ts}\"",
-    "prettier:write": "prettier --write \"**/*.{ts}\""
+    "prettier": "prettier --check \"**/*.ts\"",
+    "prettier:write": "prettier --write \"**/*.ts\"",
+    "mongo": "tsx script/mongo-memory-server.ts"
   },
   "dependencies": {
-    "mongodb": "^6.3.0",
     "mongoose": "^8.0.2",
     "next": "14.0.3",
     "react": "^18",
-    "react-dom": "^18"
+    "react-dom": "^18",
+    "zod": "^3.22.4"
   },
   "devDependencies": {
     "@shelf/jest-mongodb": "^4.2.0",
@@ -54,8 +53,7 @@
     "mongodb-memory-server": "^9.1.1",
     "prettier": "^3.1.0",
     "ts-jest": "^29.1.1",
-    "ts-node": "^10.9.1",
-    "tsconfig-paths": "^4.2.0",
+    "tsx": "^4.6.2",
     "typescript": "^5"
   }
 }

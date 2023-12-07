@@ -15,6 +15,7 @@
     "jsx": "preserve",
     "incremental": true,
     "sourceMap": true,
+    "baseUrl": ".",
     "paths": {
       "~/*": ["./*"]
     },
@@ -33,10 +34,4 @@
   },
   "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", ".next/types/**/*.ts"],
   "exclude": ["node_modules", "**/.*/"],
-  "ts-node": {
-    "swc": true,
-    "require": [
-      "tsconfig-paths/register"
-    ]
-  }
 }
